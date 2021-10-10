@@ -1,0 +1,140 @@
+@import "./variables.less";
+
+body {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+// Mixins
+.style-text(@color, @font-size, @font-weight, @line-height, @text-align: left) {
+	color: @color;
+	font-size: @font-size;
+	font-weight: @font-weight;
+	line-height: @line-height;
+	text-align: @text-align;
+}
+
+//Shared styles
+.main-table {
+	font-family: @font-family;
+	max-width: 600px;
+	padding: 0 28px;
+	margin: 0 auto;
+}
+
+.button-styles {
+	display: inline-block;
+	border: 1px solid #000;
+	border-radius: 4px;
+	background-color: #fff;
+	padding: 13px;
+	cursor: pointer;
+	font-family: @font-family;
+	text-decoration: none;
+	.style-text(#000, 14px, 500, 16px, center);
+}
+
+// Styling Heroes
+header {
+	.logo {
+		.style-text(#000, 36px, 700, 49px, center);
+	}
+}
+
+main {
+	.heroes {
+		text-align: center;
+
+		.title {
+			.style-text(#000, 36px, 700, 49px, center);
+		}
+
+		.heroContainer {
+			img {
+				width: 100%;
+			}
+		}
+
+		p {
+			.style-text(#000, 19px, 400, 24px, center);
+		}
+	}
+}
+
+//Styling Table
+table {
+	margin: 50px 0;
+
+	td {
+		vertical-align: top;
+		width: 47%;
+
+		img {
+			width: 90%;
+		}
+
+		.text {
+			width: 47%;
+
+			h2 {
+				margin-bottom: 0;
+			}
+
+			p {
+				margin: 5px 0 10px;
+			}
+		}
+	}
+}
+
+//Styling article
+article {
+	p {
+		.style-text(#000, 20px, 400, 30px);
+	}
+}
+
+//Horizontal Line
+.horizontal-line {
+	width: 100%;
+	background-color: #000;
+	height: 2px;
+	margin-bottom: 30px;
+}
+
+//Footer styles
+footer {
+	margin: 50px auto 0;
+	text-align: center;
+
+	.container {
+		p,
+		a {
+			.style-text(#000,13px,400,18px,center);
+			margin: 0;
+		}
+	}
+
+	.socialContainer {
+		margin: 10px auto;
+
+		p {
+			text-align: center;
+
+			a {
+				color: #000;
+				text-decoration: none;
+				font-size: 18px;
+				margin: 0 10px;
+
+				img {
+					width: 20px;
+				}
+			}
+		}
+	}
+
+	> p {
+		.style-text(#000, 26px, 700, 36px,center);
+	}
+}
